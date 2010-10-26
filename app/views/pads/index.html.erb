@@ -1,0 +1,27 @@
+<h1>Listing pads</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Location based</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pads.each do |pad| %>
+  <tr>
+    <td><%= pad.title %></td>
+    <td><%= pad.location_based %></td>
+    <td><%= pad.content %></td>
+    <td><%= link_to 'Show', pad %></td>
+    <td><%= link_to 'Edit', edit_pad_path(pad) %></td>
+    <td><%= link_to 'Destroy', pad, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pad', new_pad_path %>

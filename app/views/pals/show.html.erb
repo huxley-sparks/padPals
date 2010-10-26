@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pal.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @pal.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_pal_path(@pal) %> |
+<%= link_to 'Back', pals_path %>

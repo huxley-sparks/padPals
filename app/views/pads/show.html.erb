@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @pad.title %>
+</p>
+
+<p>
+  <b>Location based:</b>
+  <%= @pad.location_based %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @pad.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_pad_path(@pad) %> |
+<%= link_to 'Back', pads_path %>

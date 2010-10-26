@@ -1,0 +1,29 @@
+<%= form_for(@pad) do |f| %>
+  <% if @pad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pad.errors.count, "error") %> prohibited this pad from being saved:</h2>
+
+      <ul>
+      <% @pad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :location_based %><br />
+    <%= f.check_box :location_based %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
